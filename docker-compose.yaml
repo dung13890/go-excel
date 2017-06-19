@@ -1,0 +1,19 @@
+version: '2'
+services:
+  homestead:
+    image: shincoder/homestead:php7.0
+    restart: always
+    ports:
+        - "80:80" # web
+        - "22:22" # web
+    volumes:
+        - ./apps:/apps # all apps
+  go:
+    image: golang:1.8
+    restart: on-failure
+    volumes:
+        - ./apps/go:/go/src/github.com/dung13890/go-seminar
+    working_dir: /go/src/github.com/dung13890/go-seminar
+    environment:
+      - GOBIN=/go/bin
+    tty: true

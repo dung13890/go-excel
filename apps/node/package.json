@@ -1,0 +1,13 @@
+{
+  "name": "test_excel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "read": "node --max_old_space_size=4000 index.js read",
+    "write": "node --max_old_space_size=4000 index.js write"
+  },
+  "author": "Dao Anh Dung",
+  "license": "ISC"
+}
